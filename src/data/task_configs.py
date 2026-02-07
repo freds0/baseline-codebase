@@ -36,3 +36,15 @@ task3_config = {
     "label_extension": ".txt",
     "labels": {"regression": "Age"},  # Define as regression task
 }
+
+openbhb_config = {
+    "task_name": "OpenBHB_BrainAge",
+    "crop_to_nonzero": False,  # Already in MNI space
+    "deep_supervision": False,
+    "modalities": ("T1",),  # Single modality quasiraw T1
+    "norm_op": "volume_wise_znorm",
+    "num_classes": 1,  # Regression output dimension
+    "keep_aspect_ratio": True,
+    "task_type": "regression",
+    "labels": {"regression": "Age"},
+}
